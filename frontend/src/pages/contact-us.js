@@ -242,7 +242,7 @@ const ContactUs = () => {
                     {/* {showingTranslateValue(
                       storeCustomizationSetting?.contact_us?.email_box_email
                     )} */}
-                    irtiqazaffari@gmail.com@gmail.com
+                    irtiqazaffari@gmail.com
                   </a>{" "}
                   {showingTranslateValue(
                     storeCustomizationSetting?.contact_us?.email_box_text,

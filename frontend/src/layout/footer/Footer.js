@@ -76,7 +76,7 @@ const Footer = () => {
                 {storeCustomizationSetting?.footer?.block4_email && (
                   <div className="block">
                     <span className="text-gray-500 mr-2">Email:</span>
-                    <p className="hover:text-white transition-colors">irtiqazaffari@gmail.com@gmail.com</p>
+                    <p className="hover:text-white transition-colors">irtiqazaffari@gmail.com</p>
                   </div>
                 )}
               </address> */}
@@ -170,10 +170,10 @@ const Footer = () => {
                     Email
                   </span>
                   <a
-                    href="mailto:irtiqazaffari@gmail.com@gmail.com"
+                    href="mailto:irtiqazaffari@gmail.com"
                     className="hover:text-white transition-colors"
                   >
-                    irtiqazaffari@gmail.com@gmail.com
+                    irtiqazaffari@gmail.com
                   </a>
                 </li>
                 <li className="block">
@@ -346,12 +346,12 @@ const Footer = () => {
               &copy; {new Date().getFullYear()} All rights reserved. Designed &
               Developed by{" "}
               <a
-                href="https://irtiqazaffari@gmail.com@gmail.com"
+                href="https://irtiqazaffari@gmail.com"
                 target="_blank"
                 rel="noreferrer"
                 className="text-white"
               >
-                Krishanu Rastogi
+               Irtiqa Zaffar
               </a>
             </p>
           </div>

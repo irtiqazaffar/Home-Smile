@@ -58,7 +58,7 @@ const Invoice = ({ data, printRef, globalSetting, currency }) => {
               <br />
               Phone: +91 8904056999
               <br />
-              Email: irtiqazaffari@gmail.com@gmail.com
+              Email: irtiqazaffari@gmail.com
             </p>
           </div>
         </div>
