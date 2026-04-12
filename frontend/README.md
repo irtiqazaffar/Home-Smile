@@ -1,0 +1,2 @@
+Home Smile Frontend Documentation
+

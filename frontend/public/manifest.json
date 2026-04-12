@@ -1,0 +1,35 @@
+{
+  "theme_color": "#f69435",
+  "background_color": "#f69435",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "id": "/",
+  "short_name": "Home Smile - Store",
+  "name": "Home Smile - Home Smile",
+  "description": "Home Smile",
+  "icons": [
+    {
+      "src": "/https://Home Smile.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjrbdgtzr%2Fimage%2Fupload%2Fv1729058653%2Fundefined%2FAsset16.png&w=1920&q=75",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/https://Home Smile.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjrbdgtzr%2Fimage%2Fupload%2Fv1729058653%2Fundefined%2FAsset16.png&w=1920&q=75",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/https://Home Smile.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjrbdgtzr%2Fimage%2Fupload%2Fv1729058653%2Fundefined%2FAsset16.png&w=1920&q=75",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/https://Home Smile.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjrbdgtzr%2Fimage%2Fupload%2Fv1729058653%2Fundefined%2FAsset16.png&w=1920&q=75",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
