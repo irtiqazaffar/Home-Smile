@@ -31,19 +31,18 @@ const ContactUs = () => {
   const { storeCustomizationSetting, loading, error } = useGetSetting();
 
   const submitHandler = async (data) => {
-
     const supportData = {
       email: data.email,
       name: data.name,
       subject: data.subject,
       location: data.location,
       number: data.number,
-      message: data.message
-    }
+      message: data.message,
+    };
 
     setMailLoading(true);
     try {
-      const res = await CustomerServices.contactSupport(supportData)
+      const res = await CustomerServices.contactSupport(supportData);
       setValue("email", "");
       setValue("name", "");
       setValue("subject", "");
@@ -62,7 +61,6 @@ const ContactUs = () => {
     <Layout title="Contact Us" description="This is contact us page">
       <div className="bg-white">
         <div className="max-w-screen-2xl mx-auto lg:py-8 py-10 px-4 sm:px-10">
-
           {/* contact form */}
           <div className="px-0 mx-auto flex flex-col md:flex-row w-full justify-between">
             <div className="hidden md:w-full lg:w-5/12 lg:flex flex-col h-full">
@@ -115,7 +113,7 @@ const ContactUs = () => {
                         name="name"
                         type="text"
                         placeholder={t(
-                          "common:contact-page-form-plaholder-name"
+                          "common:contact-page-form-plaholder-name",
                         )}
                       />
                       <Error errorName={errors.name} />
@@ -127,7 +125,7 @@ const ContactUs = () => {
                         name="email"
                         type="email"
                         placeholder={t(
-                          "common:contact-page-form-plaholder-email"
+                          "common:contact-page-form-plaholder-email",
                         )}
                       />
                       <Error errorName={errors.email} />
@@ -140,9 +138,7 @@ const ContactUs = () => {
                         label={"Number"}
                         name="number"
                         type="number"
-                        placeholder={t(
-                          "Enter Your Number"
-                        )}
+                        placeholder={t("Enter Your Number")}
                       />
                       <Error errorName={errors.number} />
                     </div>
@@ -152,9 +148,7 @@ const ContactUs = () => {
                         label={"Location"}
                         name="location"
                         type="text"
-                        placeholder={t(
-                          "Enter Your Location"
-                        )}
+                        placeholder={t("Enter Your Location")}
                       />
                       <Error errorName={errors.location} />
                     </div>
@@ -165,9 +159,7 @@ const ContactUs = () => {
                       label={"Subject"}
                       name="subject"
                       type="text"
-                      placeholder={t(
-                        "Enter Subject"
-                      )}
+                      placeholder={t("Enter Subject")}
                     />
                     <Error errorName={errors.subject} />
                   </div>
@@ -185,7 +177,7 @@ const ContactUs = () => {
                       spellCheck="false"
                       rows="4"
                       placeholder={t(
-                        "common:contact-page-form-plaholder-message"
+                        "common:contact-page-form-plaholder-message",
                       )}
                     ></textarea>
                     <Error errorName={errors.message} />
@@ -238,7 +230,7 @@ const ContactUs = () => {
                 </span>
                 <h5 className="text-xl mb-2 text-white font-bold">
                   {showingTranslateValue(
-                    storeCustomizationSetting?.contact_us?.email_box_title
+                    storeCustomizationSetting?.contact_us?.email_box_title,
                   )}
                 </h5>
                 <p className="mb-0 text-base text-white opacity-90 leading-7">
@@ -250,10 +242,10 @@ const ContactUs = () => {
                     {/* {showingTranslateValue(
                       storeCustomizationSetting?.contact_us?.email_box_email
                     )} */}
-                    krishanurastogi06@gmail.com
+                    irtiqazaffari@gmail.com@gmail.com
                   </a>{" "}
                   {showingTranslateValue(
-                    storeCustomizationSetting?.contact_us?.email_box_text
+                    storeCustomizationSetting?.contact_us?.email_box_text,
                   )}
                 </p>
               </div>
@@ -273,7 +265,7 @@ const ContactUs = () => {
                 </span>
                 <h5 className="text-xl mb-2 text-white font-bold">
                   {showingTranslateValue(
-                    storeCustomizationSetting?.contact_us?.call_box_title
+                    storeCustomizationSetting?.contact_us?.call_box_title,
                   )}
                 </h5>
                 <p className="mb-0 text-base text-white opacity-90 leading-7">
@@ -284,10 +276,10 @@ const ContactUs = () => {
                     {/* {showingTranslateValue(
                       storeCustomizationSetting?.contact_us?.call_box_phone
                     )} */}
-                    +91 8130065326
+                    +91 8904056999
                   </a>{" "}
                   {showingTranslateValue(
-                    storeCustomizationSetting?.contact_us?.call_box_text
+                    storeCustomizationSetting?.contact_us?.call_box_text,
                   )}
                 </p>
               </div>
@@ -306,7 +298,7 @@ const ContactUs = () => {
                 </span>
                 <h5 className="text-xl mb-2 text-white font-bold">
                   {showingTranslateValue(
-                    storeCustomizationSetting?.contact_us?.address_box_title
+                    storeCustomizationSetting?.contact_us?.address_box_title,
                   )}
                 </h5>
                 <p className="mb-0 text-base text-white opacity-90 leading-7">
@@ -326,8 +318,8 @@ const ContactUs = () => {
                     storeCustomizationSetting?.contact_us
                       ?.address_box_address_three
                   )} */}
-                  123 Innovation Drive, Tech Park,
-                  Sector 45, Gurgaon, Haryana - 122003
+                  123 Innovation Drive, Tech Park, Sector 45, Gurgaon, Haryana -
+                  122003
                 </p>
               </div>
             )}

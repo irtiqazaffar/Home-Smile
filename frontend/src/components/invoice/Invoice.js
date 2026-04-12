@@ -9,7 +9,8 @@ import useUtilsFunction from "@hooks/useUtilsFunction";
 const Invoice = ({ data, printRef, globalSetting, currency }) => {
   // console.log('invoice data',data)
 
-  const { getNumberTwo, numberToWords, capitalizeFirstLetter } = useUtilsFunction();
+  const { getNumberTwo, numberToWords, capitalizeFirstLetter } =
+    useUtilsFunction();
 
   return (
     <div ref={printRef}>
@@ -19,15 +20,12 @@ const Invoice = ({ data, printRef, globalSetting, currency }) => {
           <div>
             <h2 className="text-2xl">
               <Link href="/">
-                <Image
-                  width={210}
-                  height={210}
-                  src="/logo2.png"
-                  alt="logo"
-                />
+                <Image width={210} height={210} src="/logo2.png" alt="logo" />
               </Link>
             </h2>
-            <h1 className="mt-2 font-bold font-serif text-2xl uppercase">Invoice</h1>
+            <h1 className="mt-2 font-bold font-serif text-2xl uppercase">
+              Invoice
+            </h1>
             <h6 className="text-gray-700">
               Status :{" "}
               {data.status === "Delivered" && (
@@ -55,9 +53,12 @@ const Invoice = ({ data, printRef, globalSetting, currency }) => {
           <div className="sm:text-right lg:text-right text-left">
             <p className="text-sm text-gray-500">
               Home Smile <br />
-              123 Innovation Drive, Tech Park, Sector 45, Gurgaon, Haryana - 122003<br />
-              Phone: +91 8130065326<br />
-              Email: krishanurastogi06@gmail.com
+              123 Innovation Drive, Tech Park, Sector 45, Gurgaon, Haryana -
+              122003
+              <br />
+              Phone: +91 8904056999
+              <br />
+              Email: irtiqazaffari@gmail.com@gmail.com
             </p>
           </div>
         </div>
@@ -95,8 +96,10 @@ const Invoice = ({ data, printRef, globalSetting, currency }) => {
               Customer Name.
             </span>
             <span className="text-sm text-gray-500 block">
-              {"Mr./Mrs. "}{data?.user_info?.name} <br />
-              {data?.user_info?.email}<br />
+              {"Mr./Mrs. "}
+              {data?.user_info?.name} <br />
+              {data?.user_info?.email}
+              <br />
               <span className="ml-2">{data?.user_info?.contact}</span>
               <br />
               {data?.user_info?.address}
@@ -202,7 +205,8 @@ const Invoice = ({ data, printRef, globalSetting, currency }) => {
           </div>
         </div>
         <div className="w-full text-right text-gray-500 font-semibold font-serif mt-2">
-          {capitalizeFirstLetter(numberToWords(getNumberTwo(data.total)))}{" Only"}
+          {capitalizeFirstLetter(numberToWords(getNumberTwo(data.total)))}
+          {" Only"}
         </div>
       </div>
     </div>
