@@ -32,7 +32,6 @@ import NotificationServices from "@/services/NotificationServices";
 import { notifyError } from "@/utils/toast";
 import usePermission from "@/hooks/usePermission";
 
-
 const Header = () => {
   const { toggleSidebar, handleLanguageChange, setNavBar, navBar } =
     useContext(SidebarContext);
@@ -210,16 +209,15 @@ const Header = () => {
 
             {/* Profile Info */}
             <div>
-              <h1 className="font-semibold text-md">Krishanu Rastogi</h1>
+              <h1 className="font-semibold text-md">Irtiqa Zaffar</h1>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-green-500 dark:bg-green-300 rounded-full" />
-                <p className="text-xs text-gray-500 dark:text-gray-400">Admin</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400">
+                  Admin
+                </p>
               </div>
             </div>
-
-
           </div>
-
 
           {/* <!-- Mobile hamburger --> */}
           <button
@@ -266,14 +264,15 @@ const Header = () => {
               {notificationOpen && (
                 <div className="origin-top-right absolute md:right-0 -right-3 top-2 rounded-md shadow-lg bg-white dark:bg-gray-800  focus:outline-none">
                   <div
-                    className={`${data?.length === 0
-                      ? "h-40"
-                      : data?.length <= 2
+                    className={`${
+                      data?.length === 0
                         ? "h-40"
-                        : data?.length <= 3
-                          ? "h-56"
-                          : "h-330"
-                      } md:w-400 w-300`}
+                        : data?.length <= 2
+                          ? "h-40"
+                          : data?.length <= 3
+                            ? "h-56"
+                            : "h-330"
+                    } md:w-400 w-300`}
                   >
                     <Scrollbars>
                       {data?.length === 0 ? (
@@ -284,10 +283,12 @@ const Header = () => {
                             return (
                               <li
                                 key={index + 1}
-                                className={`flex justify-between items-center font-serif font-normal text-sm py-3 border-b border-gray-100 dark:border-gray-700 px-3 transition-colors duration-150 hover:bg-gray-100 ${value.status === "unread" && "bg-gray-50"
-                                  } hover:text-gray-800 dark:text-gray-400 ${value.status === "unread" &&
+                                className={`flex justify-between items-center font-serif font-normal text-sm py-3 border-b border-gray-100 dark:border-gray-700 px-3 transition-colors duration-150 hover:bg-gray-100 ${
+                                  value.status === "unread" && "bg-gray-50"
+                                } hover:text-gray-800 dark:text-gray-400 ${
+                                  value.status === "unread" &&
                                   "dark:bg-gray-800"
-                                  } dark:hover:bg-[#171717]  dark:hover:text-gray-100 cursor-pointer`}
+                                } dark:hover:bg-[#171717]  dark:hover:text-gray-100 cursor-pointer`}
                               >
                                 <Link
                                   to={
@@ -378,7 +379,10 @@ const Header = () => {
             </li>
 
             {/* <!-- Profile menu --> */}
-            <li className="relative inline-block md:hidden text-left" ref={pRef}>
+            <li
+              className="relative inline-block md:hidden text-left"
+              ref={pRef}
+            >
               <button
                 className="rounded-full dark:bg-gray-500 bg-gray-500 text-white h-8 w-8 font-medium mx-auto focus:outline-none"
                 onClick={handleProfileOpen}
