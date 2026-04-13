@@ -36,7 +36,7 @@ const verifyEmailAddress = async (req, res) => {
     };
 
     const message = "Please check your email to verify your account!";
-    sendEmail(body, res, message);
+    await sendEmail(body, res, message);
   }
 };
 
@@ -201,10 +201,10 @@ const directSignUpCustomer = async (req, res) => {
           email,
           otp,
         });
-        newOtp.save();
+        await newOtp.save();
 
         const message = "Please check your email to verify account!";
-        sendEmail(body, res, message);
+        await sendEmail(body, res, message);
       }
   } catch (err) {
     res.status(500).send({

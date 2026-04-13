@@ -221,17 +221,20 @@ const ProductCard = ({ product, attributes }) => {
             {product.image[0] ? (
               <Image
                 src={product.image[0]} // Ensure this is a valid URL
-                layout="fill" // Fills the parent container
-                objectFit="cover" // Ensures the image fills the area
+                fill
+                style={{ objectFit: 'cover' }}
                 alt="product"
                 className="absolute inset-0 object-cover w-full rounded-full"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 320px"
               />
             ) : (
               <Image
                 src={DUMMY_IMAGE} // Fallback
-                layout="fill"
+                fill
+                style={{ objectFit: 'cover' }}
                 alt="product"
                 className="absolute inset-0 object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 320px"
               />
             )}
 

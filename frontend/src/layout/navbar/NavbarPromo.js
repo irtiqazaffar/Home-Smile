@@ -101,7 +101,7 @@ const NavbarPromo = () => {
         <div className="max-w-screen-2xl mx-auto px-3 sm:px-10 lg:px-24 h-28 pt-5 pb-2 flex justify-between items-center">
           <div>
             {/* <Image
-                          src={"https://Home Smile.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjrbdgtzr%2Fimage%2Fupload%2Fv1734243800%2Fproduct%2FWhatsAppImage2024-12-15at11.18.45AM.jpg&w=640&q=75"} // Replace with your image path
+                          src={"https://homesmile.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjrbdgtzr%2Fimage%2Fupload%2Fv1734243800%2Fproduct%2FWhatsAppImage2024-12-15at11.18.45AM.jpg&w=640&q=75"} // Replace with your image path
                           alt="Home"
                           width={200} // Set width of the image
                           height={100} // Set height of the image
@@ -183,7 +183,7 @@ const NavbarPromo = () => {
                 >
                   {category?.name?.en}
                   {category?.children && (
-                    <div class="w-0 h-0 border-l-[6px] ms-2 border-r-[6px] border-t-[10px] border-transparent border-t-black"></div>
+                    <div className="w-0 h-0 border-l-[6px] ms-2 border-r-[6px] border-t-[10px] border-transparent border-t-black"></div>
                   )}
                 </div>
 

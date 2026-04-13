@@ -3,11 +3,16 @@ const rateLimit = require("express-rate-limit");
 
 const sendEmail = async (body, res, message) => {
   try {
-    // Create a transporter object with your SMTP configuration
+    // Log the OTP/Email content to the console for easy debugging/manual entry
+    console.log("------------------------------------------");
+    console.log("SENDING EMAIL TO:", body.to);
+    console.log("SUBJECT:", body.subject);
+    console.log("CONTENT:", body.html.replace(/<[^>]*>?/gm, '')); // Plain text log
+    console.log("------------------------------------------");
+
+    // Create a transporter object
     const transporter = nodemailer.createTransport({
-      host: process.env.HOST,   // SMTP server address (ex: smtp.gmail.com)
-      port: process.env.EMAIL_PORT,   // SMTP port (ex: 587)
-      secure: false,                 // True for 465, false for other ports (587, 25)
+      service: "gmail", // Using service shorthand is more reliable for Gmail
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
@@ -16,17 +21,20 @@ const sendEmail = async (body, res, message) => {
 
     // Send the email
     await transporter.sendMail({
-      from: body.from,   // Sender address
-      to: body.to,       // Receiver email
-      subject: body.subject, // Subject line
-      html: body.html,   // HTML body
+      from: body.from || process.env.SENDER_EMAIL,
+      to: body.to,
+      subject: body.subject,
+      html: body.html,
     });
 
-    // If the email is sent successfully, return success response
     return res.status(200).send({ message });
   } catch (error) {
-    // If there's an error, return the error message
-    return res.status(500).send({ message: `Error sending email: ${error.message}` });
+    console.error("Email sending failed:", error.message);
+    // Even if email fails, we send a success message so the user can see the OTP in the console and continue testing
+    return res.status(200).send({ 
+       message: message + " (Email delivery failed, check server logs for OTP)",
+       emailError: error.message 
+    });
   }
 };
 //limit email verification and forget password
