@@ -22,25 +22,25 @@ const useSignUpSubmit = () => {
     setLoading(true);
 
     try {
-        const res = await CustomerServices.signUpCustomer({
-            email,password,name,otp
-        })
-        if(res.status === 100){
-          notifySuccess(res.message);
-          router.push("/auth/login")
-          setLoading(false);
-        }else if(res.status === 300){
-          notifyError(res.message);
-          setLoading(false);
-        }else{
-          notifySuccess(res.message);
-          setIsOpen(true);
-          setLoading(false);
-        }
-    } catch (err) {
-        notifyError(err ? err?.response?.data?.message : err?.message);
+      const res = await CustomerServices.signUpCustomer({
+        email, password, name, otp
+      })
+      if (res.status === 100) {
+        notifySuccess(res.message);
+        router.push("/auth/login")
         setLoading(false);
-        return
+      } else if (res.status === 300) {
+        notifyError(res.message);
+        setLoading(false);
+      } else {
+        notifySuccess(res.message);
+        setIsOpen(true);
+        setLoading(false);
+      }
+    } catch (err) {
+      notifyError(err ? err?.response?.data?.message : err?.message);
+      setLoading(false);
+      return
     }
   };
 

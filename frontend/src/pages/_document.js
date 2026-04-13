@@ -82,7 +82,7 @@ class MyDocument extends Document {
           <meta
             property="og:url"
             content={
-              setting?.seo?.meta_url || "https://homesmile.com"
+              setting?.seo?.meta_url || "https://homesmile.onrender.com"
             }
           />
           <meta

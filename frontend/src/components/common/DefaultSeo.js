@@ -49,7 +49,7 @@ const DefaultSeo = () => {
       additionalLinkTags={[
         {
           rel: "apple-touch-icon",
-          href: "https://homesmile.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjrbdgtzr%2Fimage%2Fupload%2Fv1729058653%2Fundefined%2FAsset16.png&w=1920&q=75",
+          href: "/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjrbdgtzr%2Fimage%2Fupload%2Fv1729058653%2Fundefined%2FAsset16.png&w=1920&q=75",
         },
         {
           rel: "manifest",

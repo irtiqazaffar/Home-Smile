@@ -88,7 +88,7 @@ const FeatureCat = () => {
               >
                 <div className="relative w-[60px] h-[60px] overflow-hidden group">
                   <Image
-                    src="https://homesmile.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjrbdgtzr%2Fimage%2Fupload%2Fv1734705340%2Fproduct%2F46468468.png&w=640&q=75"
+                    src="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjrbdgtzr%2Fimage%2Fupload%2Fv1734705340%2Fproduct%2F46468468.png&w=640&q=75"
                     alt="New Arrivals"
                     fill
                     style={{ objectFit: 'cover' }}
