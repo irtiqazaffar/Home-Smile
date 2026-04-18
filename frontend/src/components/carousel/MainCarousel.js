@@ -148,9 +148,10 @@ const MainCarousel = () => {
                 <Image
                   src={item.image}
                   alt={item.title}
-                  className="object-cover" // Use object-cover if you want to fill the area and crop
-                  layout="fill"
+                  fill
+                  style={{ objectFit: 'cover' }}
                   priority
+                  sizes="100vw"
                 />
                 {/* Text Overlay */}
                 {/* <div className="absolute top-10 left-0 w-full h-full flex flex-col justify-center items-start p-4 sm:p-8">

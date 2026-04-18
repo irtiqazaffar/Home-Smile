@@ -2,7 +2,7 @@
   "name": "Home Smile-store",
   "version": "0.1.0",
   "description": "this is Home Smile-store built with next.js and tailwindcss",
-  "homepage": "https://Home Smile.com",
+  "homepage": "https://homesmile.com",
   "private": true,
   "scripts": {
     "dev": "next dev",

@@ -88,11 +88,12 @@ const FeatureCat = () => {
               >
                 <div className="relative w-[60px] h-[60px] overflow-hidden group">
                   <Image
-                    src="https://Home Smile.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjrbdgtzr%2Fimage%2Fupload%2Fv1734705340%2Fproduct%2F46468468.png&w=640&q=75"
+                    src="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjrbdgtzr%2Fimage%2Fupload%2Fv1734705340%2Fproduct%2F46468468.png&w=640&q=75"
                     alt="New Arrivals"
-                    layout="fill"
-                    objectFit="cover"
+                    fill
+                    style={{ objectFit: 'cover' }}
                     className="w-full h-full rounded-full transition-transform duration-[1000ms] ease-in-out transform group-hover:scale-105"
+                    sizes="60px"
                   />
                 </div>
                 <div className="text-xs mt-2 text-center">New Arrivals</div>
@@ -108,9 +109,10 @@ const FeatureCat = () => {
                   <Image
                     src={storeCustomizationSetting?.home?.quick_delivery_img}
                     alt="Best Selling"
-                    layout="fill"
-                    objectFit="cover"
+                    fill
+                    style={{ objectFit: 'cover' }}
                     className="w-full h-full rounded-full transition-transform duration-[1000ms] ease-in-out transform group-hover:scale-105"
+                    sizes="60px"
                   />
                 </div>
                 <div className="text-xs mt-2 text-center">Best Selling</div>
@@ -129,9 +131,10 @@ const FeatureCat = () => {
                     <Image
                       src={category?.icon || DUMMY_IMAGE}
                       alt={category?.name?.en}
-                      layout="fill"
-                      objectFit="cover"
+                      fill
+                      style={{ objectFit: 'cover' }}
                       className="w-full h-full rounded-full transition-transform duration-[1000ms] ease-in-out transform group-hover:scale-105"
+                      sizes="60px"
                     />
                   </div>
                   <div className="text-xs mt-2 text-center">
@@ -150,9 +153,10 @@ const FeatureCat = () => {
                   <Image
                     src="https://webkul.com/blog/wp-content/uploads/2014/06/Bulk-Buy-Banner.png"
                     alt="Buy In Bulk"
-                    layout="fill"
-                    objectFit="cover"
+                    fill
+                    style={{ objectFit: 'cover' }}
                     className="w-full h-full rounded-full transition-transform duration-[1000ms] ease-in-out transform group-hover:scale-105"
+                    sizes="60px"
                   />
                 </div>
                 <div className="text-xs mt-2 text-center">Buy In Bulk</div>

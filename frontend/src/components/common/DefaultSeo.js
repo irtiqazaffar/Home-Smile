@@ -38,7 +38,7 @@ const DefaultSeo = () => {
             "minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover",
         },
         {
-          name: "apple-mobile-web-app-capable",
+          name: "mobile-web-app-capable",
           content: "yes",
         },
         {
@@ -49,7 +49,7 @@ const DefaultSeo = () => {
       additionalLinkTags={[
         {
           rel: "apple-touch-icon",
-          href: "/https://Home Smile.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjrbdgtzr%2Fimage%2Fupload%2Fv1729058653%2Fundefined%2FAsset16.png&w=1920&q=75",
+          href: "/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjrbdgtzr%2Fimage%2Fupload%2Fv1729058653%2Fundefined%2FAsset16.png&w=1920&q=75",
         },
         {
           rel: "manifest",

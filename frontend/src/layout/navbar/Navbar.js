@@ -140,9 +140,10 @@ const Navbar = () => {
                 <Image
                   src="/logo.png"
                   alt="Company Logo"
-                  layout="fill" // Automatically adjusts the image size
-                  objectFit="contain" // Ensures the image fits within the div without distortion
+                  fill
+                  style={{ objectFit: 'contain' }}
                   priority
+                  sizes="(max-width: 768px) 100vw, 176px"
                 />
               </div>
             </Link>

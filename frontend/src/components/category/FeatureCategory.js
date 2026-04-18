@@ -59,9 +59,10 @@ const FeatureCategory = () => {
           <Image
             src={category?.icon || DUMMY_IMAGE}
             alt="category"
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: 'cover' }}
             className="w-full h-full transition-transform duration-[1000ms] ease-in-out transform group-hover:scale-105"
+            sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 250px"
           />
         </div>
 
